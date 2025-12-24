@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinetiGuard – The Smart Knee Guard</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义 Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .section-padding {
+                @apply py-16 md:py-24;
+            }
+            .container-custom {
+                @apply container mx-auto px-4 md:px-8 lg:px-12;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+        }
+    </style>
+    <!-- 引入 Inter 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container-custom py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
+                <i class="fa-solid fa-knee-brace"></i>
+                <span>KinetiGuard</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="#innovation" class="text-dark/80 hover:text-primary transition-colors">Innovation</a>
+                <a href="#how-it-works" class="text-dark/80 hover:text-primary transition-colors">How It Works</a>
+                <a href="#features" class="text-dark/80 hover:text-primary transition-colors">Features</a>
+                <a href="#impact" class="text-dark/80 hover:text-primary transition-colors">Impact</a>
+                <a href="#team" class="text-dark/80 hover:text-primary transition-colors">Team</a>
+            </div>
+            <button class="md:hidden text-dark text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-primary/5 to-white">
+        <div class="container-custom flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            <div class="w-full md:w-1/2">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow mb-6">
+                    KinetiGuard – The Smart Knee Guard
+                </h1>
+                <p class="text-lg md:text-xl text-dark/70 mb-8 max-w-lg">
+                    Real-time protection for young athletes, preventing ACL injuries with Edge AI and smart sensing technology.
+                </p>
+                <a href="#innovation" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-md">
+                    Discover Our Innovation
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 bg-white rounded-2xl shadow-xl p-6 flex items-center justify-center">
+                <!-- 产品占位图 -->
+                <div class="w-full h-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
+                    <p class="text-gray-500 text-center">
+                        <i class="fa-solid fa-knee-brace text-4xl mb-2"></i>
+                        <br>Product Visualization
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 创新板块 -->
+    <section id="innovation" class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="flex items-center gap-3 mb-8">
+                <i class="fa-solid fa-rocket text-secondary text-2xl"></i>
+                <h2 class="text-3xl md:text-4xl font-bold">Our Innovation</h2>
+            </div>
+            <div class="max-w-4xl">
+                <p class="text-lg text-dark/80 mb-6">
+                    KinetiGuard is a low-cost smart knee brace system that uses IMU sensors and Edge AI technology to detect high-risk knee movements in real time and intervene instantly, preventing sports injuries in young athletes.
+                </p>
+                <p class="text-lg text-dark/80">
+                    Our product is designed for school sports teams and youth sports clubs, helping athletes identify and correct harmful movement patterns during training and competition, reducing the risk of ACL (anterior cruciate ligament) injuries.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作原理板块 -->
+    <section id="how-it-works" class="section-padding bg-gray-50">
+        <div class="container-custom">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 实时监测 -->
+                <div class="bg-white rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-satellite-dish text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real-Time Monitoring</h3>
+                    <p class="text-dark/70">Dual IMU sensors capture knee movement data in real time.</p>
+                </div>
+
+                <!-- 智能检测 -->
+                <div class="bg-white rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-brain text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Intelligent Detection</h3>
+                    <p class="text-dark/70">An embedded AI model analyzes movement risk levels instantly on the device.</p>
+                </div>
+
+                <!-- 即时干预（补充图标：fa-shield-halved 防护盾，贴合干预/保护语义） -->
+                <div class="bg-white rounded-xl p-6 card-hover md:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-shield-halved text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Immediate Intervention</h3>
+                    <ul class="text-dark/70 space-y-2">
+                        <li><span class="font-medium">Haptic Alert:</span> Tactile warning within 0.08 seconds</li>
+                        <li><span class="font-medium">Airbag Support:</span> Inflatable pad for physical stabilization</li>
+                    </ul>
+                </div>
+
+                <!-- 持续学习 -->
+                <div class="bg-white rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-arrows-rotate text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Continuous Learning</h3>
+                    <p class="text-dark/70">Collect anonymous motion data to improve detection accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能板块 -->
+    <section id="features" class="section-padding bg-white">
+        <div class="container-custom">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Edge AI 处理 -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Edge AI Processing</h3>
+                    <p class="text-dark/70">No phone or cloud required—real-time analysis with zero latency.</p>
+                </div>
+
+                <!-- 双传感器融合（补充图标：fa-layer-group 图层/融合，贴合传感器融合语义） -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Dual-Sensor Fusion</h3>
+                    <p class="text-dark/70">Improves motion recognition accuracy and reduces false alarms.</p>
+                </div>
+
+                <!-- 可扩展设计（替换原图标为 fa-network-wired，更贴合可扩展/部署语义） -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Scalable Design</h3>
+                    <p class="text-dark/70">Supports team-wide deployment and is adaptable to various sports.</p>
+                </div>
+            </div>
+
+            <!-- 产品可视化 -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Product Visualization</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 产品图片占位1 -->
+                    <div class="bg-gray-200 rounded-lg h-48 md:h-64 flex items-center justify-center card-hover">
+                        <p class="text-gray-500 text-center">Brace Design</p>
+                    </div>
+                    <!-- 产品图片占位2 -->
+                    <div class="bg-gray-200 rounded-lg h-48 md:h-64 flex items-center justify-center card-hover">
+                        <p class="text-gray-500 text-center">Sensor Layout</p>
+                    </div>
+                    <!-- 产品图片占位3 -->
+                    <div class="bg-gray-200 rounded-lg h-48 md:h-64 flex items-center justify-center card-hover">
+                        <p class="text-gray-500 text-center">Overall Appearance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社会影响板块 -->
+    <section id="impact" class="section-padding bg-primary/5">
+        <div class="container-custom">
+            <div class="flex items-center gap-3 mb-8 justify-center">
+                <i class="fa-solid fa-earth-asia text-secondary text-2xl"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-center">Intended Impact</h2>
+            </div>
+
+            <!-- 问题部分 -->
+            <div class="mb-16 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-6 text-center">The Problem</h3>
+                <div class="space-y-4 text-lg text-dark/80">
+                    <div class="flex gap-4 items-start">
+                        <i class="fa-solid fa-exclamation-circle text-secondary mt-1"></i>
+                        <p>Knee injuries among teens—especially ACL tears—are rising, with higher risk for female athletes.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <i class="fa-solid fa-exclamation-circle text-secondary mt-1"></i>
+                        <p>School sports budgets are limited (typically ¥50–200 per student annually).</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <i class="fa-solid fa-exclamation-circle text-secondary mt-1"></i>
+                        <p>Existing solutions are either too expensive (imported braces cost ¥3,000–5,000) or passive/ineffective.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 解决方案部分 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- 实时保护 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <h3 class="text-xl font-semibold mb-3">Real-Time Protection</h3>
+                    <p class="text-dark/70">Feedback and support at the moment of risk, not after the fact.</p>
+                </div>
+
+                <!-- 价格亲民 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <h3 class="text-xl font-semibold mb-3">Affordable</h3>
+                    <p class="text-dark/70">Unit cost around ¥235—about one-tenth the price of imported braces.</p>
+                </div>
+
+                <!-- 易于采用 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-3">Easy to Adopt</h3>
+                    <p class="text-dark/70">No need for continuous professional supervision, ideal for school teams.</p>
+                </div>
+            </div>
+
+            <!-- 量化影响部分 -->
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Quantifiable Impact</h3>
+                <div class="space-y-6 text-lg text-dark/80">
+                    <p>
+                        A single ACL surgery costs ¥25,000–50,000, with 6–9 months of rehabilitation.
+                    </p>
+                    <p>
+                        KinetiGuard significantly reduces injury risk, easing financial and emotional strain on families.
+                    </p>
+                    <p>
+                        Designed for the realities of school sports in China, helping more youth participate safely.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队介绍板块 -->
+    <section id="team" class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="flex items-center gap-3 mb-8 justify-center">
+                <i class="fa-solid fa-users text-secondary text-2xl"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-center">Meet the Team</h2>
+            </div>
+
+            <p class="text-lg text-dark/80 text-center max-w-3xl mx-auto mb-12">
+                We are a cross-disciplinary team passionate about youth sports safety, biomechanics, and applied engineering. Our backgrounds span embedded hardware, machine learning, data science, and sports medicine.
+            </p>
+
+            <!-- 团队角色 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- 硬件与系统集成（补充图标：fa-gears 齿轮/硬件，贴合硬件集成语义） -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Hardware & System Integration</h3>
+                    <p class="text-dark/70">Sensor selection, circuit design, prototyping.</p>
+                </div>
+
+                <!-- 软件与AI开发 -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Software & AI Development</h3>
+                    <p class="text-dark/70">Data pipeline construction, Edge AI model training, performance optimization.</p>
+                </div>
+
+                <!-- 生物力学研究 -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Biomechanics Research</h3>
+                    <p class="text-dark/70">Analysis of high-risk motion patterns to align with injury prevention principles.</p>
+                </div>
+            </div>
+
+            <!-- 团队动机 -->
+            <div class="max-w-3xl mx-auto bg-primary/5 rounded-2xl p-8">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Our Motivation</h3>
+                <p class="text-lg text-dark/80">
+                    Having seen peers sidelined by sports injuries—sometimes ending their athletic and academic pursuits—we recognized the gap between existing protective solutions and what schools can actually afford and use. We’re driven to make real-time, intelligent protection accessible to every student athlete.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container-custom">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <a href="#" class="text-2xl font-bold flex items-center gap-2 mb-4 md:mb-0">
+                    <i class="fa-solid fa-knee-brace"></i>
+                    <span>KinetiGuard</span>
+                </a>
+                <div class="flex gap-6 text-xl">
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 text-center text-white/60">
+                <p>© 2025 KinetiGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- 脚本 -->
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
